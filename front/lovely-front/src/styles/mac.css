@@ -1,0 +1,16 @@
+/* Mac-specific adjustments */
+.is-mac .carousel {
+  transform: scale(0.7) !important;
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .is-mac .carousel {
+    transform: scale(0.6) !important;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .is-mac .carousel {
+    transform: scale(0.4) !important;
+  }
+}

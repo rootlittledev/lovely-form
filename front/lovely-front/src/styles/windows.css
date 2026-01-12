@@ -1,0 +1,10 @@
+/* Windows-specific adjustments */
+.is-windows .carousel {
+  /* Uses default scaling from main.css */
+}
+
+@media screen and (min-width: 1920px) {
+  .is-windows .carousel {
+    transform: scale(0.8) !important;
+  }
+}
