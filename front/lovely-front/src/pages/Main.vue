@@ -56,13 +56,19 @@ onUnmounted(() => {
           <v-img src="/avatar.jpeg" alt="Profile"/>
         </v-avatar>
         <h1 class="profile-title">{{ title }}</h1>
-        <a 
-          href="https://instagram.com/lovely.form" 
-          target="_blank" 
-          class="mt-2 instagram-link"
+      </div>
+      
+      <!-- Store Button -->
+      <div class="text-center">
+        <v-btn 
+          color="white"
+          variant="outlined"
+          size="large"
+          class="store-button"
         >
-          <v-icon color="white" size="36">mdi-instagram</v-icon>
-        </a>
+          Go to Store
+          <v-icon right class="ml-2">mdi-instagram</v-icon>
+        </v-btn>
       </div>
       
       <!-- Image Carousel -->
