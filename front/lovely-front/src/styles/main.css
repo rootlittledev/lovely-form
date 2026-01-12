@@ -12,11 +12,13 @@
 }
 
 .mobile-viewport {
-  width: 634px;
-  height: calc(100vh - 80px);
+  width: 350px;
+  height: 900px;
   background: #af957e;
   border-radius: 20px 20px 0 0;
   overflow: hidden;
+  transform: scale(calc(80vh / 900));
+  transform-origin: center bottom;
 }
 
 .instagram-link {
@@ -49,7 +51,7 @@
 }
 
 .carousel-container {
-  margin-top: -60px;
+  margin-top: -40px;
   padding: 0 5px;
   display: flex;
   justify-content: center;
@@ -58,13 +60,13 @@
 .store-button {
   border-color: white !important;
   color: white !important;
-  padding: 26px 42px !important;
-  font-size: 24px !important;
-  min-width: 200px !important;
+  padding: 16px 32px !important;
+  font-size: 18px !important;
+  min-width: 180px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  margin: 150px auto 0 auto !important;
+  margin: 80px auto 0 auto !important;
   border-radius: 12px !important;
 }
 
@@ -74,5 +76,16 @@
     width: 100vw !important;
     height: 100vh !important;
     border-radius: 0 !important;
+  }
+}
+/* Large screens (1440p and above) */
+@media screen and (min-width: 2000px) {
+  .mobile-viewport {
+    transform: scale(1.3) !important;
+    height: 950px !important;
+  }
+  
+  .carousel-container {
+    margin-top: -60px !important;
   }
 }

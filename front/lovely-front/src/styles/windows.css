@@ -10,106 +10,27 @@
     height: 100vh !important;
   }
 
-  .is-windows .instagram-link {
-    margin-top: 15px !important;
-    display: block !important;
-  }
-
-    .is-windows .store-button {
-        margin-top: 80px !important;
-    }
-  
-  .is-windows .bg-brown {
-    padding-top: 0 !important;
-  }
-
-    .is-windows .carousel {
-        transform: scale(0.9) !important;
-        margin-top: 50px !important;
-    }
-}
-
-/* Tablet Portrait */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .mobile-viewport {
-    width: 400px !important;
+  .is-windows .store-button {
+    margin-top: 5vh !important;
   }
   
   .is-windows .carousel {
     transform: scale(0.9) !important;
+    margin-top: 3vh !important;
   }
 }
 
-/* Tablet Landscape / Small Desktop */
-@media screen and (min-width: 1024px) and (max-width: 1199px) {
+/* All other screen sizes use consistent viewport-relative scaling */
+@media screen and (min-width: 768px) {
   .mobile-viewport {
-    width: 500px !important;
-  }
-  
-  .is-windows .instagram-link {
-    margin-top: 15px !important;
-    display: block !important;
-  }
-  .is-windows .store-button {
-    margin-top: 70px !important;
-  }
-  .is-windows .carousel-container {
-    margin-top: -70px !important;
-  }
-  
-  .is-windows .carousel {
-    transform: scale(0.75) !important;
-  }
-}
-
-/* Desktop */
-@media screen and (min-width: 1200px) and (max-width: 1439px) {
-  .is-windows .avatar{
-      margin-top: -50px;
-  }
-  .mobile-viewport {
-    width: 500px !important;
-  }
-  
-  .is-windows .instagram-link {
-    margin-top: 20px !important;
-  }
-
-  .is-windows .store-button {
-      margin-top: 70px !important;
-      margin-bottom: 10px !important;
+    width: min(85vw, 500px) !important;
   }
   
   .is-windows .carousel {
     transform: scale(0.8) !important;
   }
-}
-
-/* Large Desktop */
-@media screen and (min-width: 1440px) and (max-width: 1919px) {
-
-  .is-windows .avatar{
-    margin-top: -50px;
-  }
-  .mobile-viewport {
-    width: 550px !important;
-  }
   
-  .is-windows .instagram-link {
-    margin-top: 20px !important;
-  }
   .is-windows .store-button {
-      margin-top: 70px !important;
-  }
-  
-  .is-windows .carousel {
-    transform: scale(0.76) !important;
-    margin-top: -10px !important;
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  .is-windows .carousel {
-    transform: scale(0.8) !important;
+    margin-top: 6vh !important;
   }
 }

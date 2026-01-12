@@ -1,116 +1,47 @@
 /* Mac-specific adjustments */
 .is-mac .carousel {
-  transform: scale(0.7) !important;
+  border: 2px solid green;
 }
 
 /* Mobile */
 @media screen and (max-width: 767px) {
-  .is-mac .mobile-viewport {
+  .mobile-viewport {
     width: 100vw !important;
     height: 100vh !important;
-    border-radius: 0 !important;
   }
 
-  .is-mac .avatar {
-    margin-top: -50px;
+  .is-mac .store-button {
+    margin-top: 5vh !important;
   }
-
-  .is-mac .instagram-link {
-    margin-top: 15px !important;
-    display: block !important;
-  }
-
-  .is-mac .bg-brown {
-    padding-top: 0 !important;
-  }
-}
-
-/* Tablet Portrait */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .is-mac .mobile-viewport {
-    width: 600px !important;
-  }
-
+  
   .is-mac .carousel {
     transform: scale(0.9) !important;
+    margin-top: 3vh !important;
   }
 }
 
-/* Tablet Landscape / Small Desktop */
-@media screen and (min-width: 1024px) and (max-width: 1199px) {
-  .is-mac .mobile-viewport {
-    width: 450px !important;
+/* All other screen sizes use consistent viewport-relative scaling */
+@media screen and (min-width: 768px) {
+  .mobile-viewport {
+    width: min(85vw, 500px) !important;
   }
-
-  .is-mac .instagram-link {
-    margin-top: 15px !important;
-    display: block !important;
-  }
-
-  .is-mac .avatar {
-    margin-top: -50px;
-  }
-
-  .is-mac .carousel {
-    margin-top: 50px;
-    transform: scale(0.75) !important;
-  }
-}
-
-/* Desktop */
-@media screen and (min-width: 1200px) and (max-width: 1439px) {
-  .is-mac .mobile-viewport {
-    width: 550px !important;
-  }
-
-  .is-mac .avatar {
-    margin-top: -50px;
-  }
-
-  .is-mac .instagram-link {
-    margin-top: 20px !important;
-  }
-
-  .is-mac .carousel {
-    transform: scale(0.65) !important;
-    margin-top: -120px !important;
-  }
-}
-
-/* Large Desktop */
-@media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .is-mac .mobile-viewport {
-    width: 500px !important;
-  }
-  .is-mac .avatar {
-    margin-top: -50px;
-  }
-
-  .is-mac .instagram-link {
-    margin-top: 20px !important;
-  }
-
+  
   .is-mac .carousel {
     transform: scale(0.7) !important;
-    margin-top: -100px !important;
+  }
+  
+  .is-mac .store-button {
+    margin-top: 6vh !important;
   }
 }
 
-@media screen and (min-width: 1920px) {
-  .is-mac .avatar {
-    margin-top: -50px;
+/* Large screens (1440p and above) */
+@media screen and (min-width: 2000px) {
+  .is-mac .carousel-container {
+    margin-top: -60px !important;
   }
-  .is-mac .mobile-viewport {
-    margin-top: 40px !important;
-    width: 480px !important;
-  }
-
-  .is-mac .instagram-link {
-    margin-top: 10px !important;
-  }
-
-  .is-mac .carousel {
-    transform: scale(0.8) !important;
-    margin-top: -90px !important;
+  
+  .is-mac .store-button {
+    margin-top: 80px !important;
   }
 }
