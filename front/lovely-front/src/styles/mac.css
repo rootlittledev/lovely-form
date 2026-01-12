@@ -1,6 +1,5 @@
 /* Mac-specific adjustments */
 .is-mac .carousel {
-  border: 2px solid green;
 }
 
 /* Mobile */
@@ -24,24 +23,16 @@
 @media screen and (min-width: 768px) {
   .mobile-viewport {
     width: min(85vw, 500px) !important;
+    transform: scale(0.9) !important;
+    height: 950px !important;
   }
   
   .is-mac .carousel {
     transform: scale(0.7) !important;
+    margin-top: -5vh !important;
   }
   
   .is-mac .store-button {
-    margin-top: 6vh !important;
-  }
-}
-
-/* Large screens (1440p and above) */
-@media screen and (min-width: 2000px) {
-  .is-mac .carousel-container {
-    margin-top: -60px !important;
-  }
-  
-  .is-mac .store-button {
-    margin-top: 80px !important;
+    margin-top: 8vh !important;
   }
 }
