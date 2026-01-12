@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const title = "lovelyform"
 const images: string[] = [
@@ -11,6 +11,26 @@ const images: string[] = [
   '/carousel/image5.jpg'
 ]
 const currentSlide = ref<number>(0)
+const screenSize = ref<string>('')
+
+const updateScreenSize = () => {
+  const width = window.innerWidth
+  if (width <= 767) screenSize.value = 'Mobile'
+  else if (width <= 1023) screenSize.value = 'Tablet Portrait'
+  else if (width <= 1199) screenSize.value = 'Tablet Landscape'
+  else if (width <= 1439) screenSize.value = 'Desktop'
+  else if (width <= 1919) screenSize.value = 'Large Desktop'
+  else screenSize.value = 'Extra Large Desktop'
+}
+
+onMounted(() => {
+  updateScreenSize()
+  window.addEventListener('resize', updateScreenSize)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', updateScreenSize)
+})
 </script>
 
 <template>
@@ -18,6 +38,7 @@ const currentSlide = ref<number>(0)
     <div class="mobile-viewport">
       <!-- Profile Image -->
       <div class="text-center" style="margin-top: 80px;">
+        <div class="screen-indicator">{{ screenSize }}</div>
         <v-avatar size="100" class="mb-4">
           <v-img src="/avatar.jpeg" alt="Profile"/>
         </v-avatar>
@@ -74,46 +95,9 @@ const currentSlide = ref<number>(0)
   border-radius: 20px;
   overflow: hidden;
 }
-
-@media (max-width: 768px) {
-  .mobile-viewport {
-    width: 100vw;
-    height: 100vh;
-    border-radius: 0;
-  }
-  
-  .bg-brown {
-    padding-top: 0;
-  }
-}
-
-.profile-title {
-  color: white;
-  font-size: 2rem;
-  font-weight: 600;
-}
-
 .instagram-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  transition: transform 0.2s ease;
-  text-decoration: none;
-  margin-top: 8px;
-}
-
-.instagram-link:hover {
-  transform: scale(1.2);
-}
-
-.carousel-container {
-  margin-top: 40px;
-  padding: 0 5px;
-  display: flex;
-  justify-content: center;
+  margin-top: 15px !important;
+  display: block !important;
 }
 
 .carousel {
@@ -121,4 +105,98 @@ const currentSlide = ref<number>(0)
   overflow: hidden;
   transform: scale(0.8);
 }
+
+.screen-indicator {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 1000;
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .mobile-viewport {
+    width: 100vw !important;
+    height: 100vh !important;
+    border-radius: 0 !important;
+  }
+
+  .instagram-link {
+    margin-top: 15px !important;
+    display: block !important;
+  }
+  
+  .bg-brown {
+    padding-top: 0 !important;
+  }
+}
+
+/* Tablet Portrait */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .mobile-viewport {
+    width: 600px !important;
+  }
+
+  
+  .carousel {
+    transform: scale(0.9) !important;
+  }
+}
+
+/* Tablet Landscape / Small Desktop */
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  .mobile-viewport {
+    width: 550px !important;
+  }
+  
+  .instagram-link {
+    margin-top: 15px !important;
+    display: block !important;
+  }
+  
+  .carousel-container {
+    margin-top: -80px !important;
+  }
+  
+  .carousel {
+    transform: scale(0.7) !important;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  .mobile-viewport {
+    width: 500px !important;
+  }
+  
+  .instagram-link {
+    margin-top: 20px !important;
+  }
+  
+  .carousel {
+    transform: scale(0.7) !important;
+  }
+}
+
+/* Large Desktop */
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .mobile-viewport {
+    width: 480px !important;
+  }
+  
+  .instagram-link {
+    margin-top: 20px !important;
+  }
+  
+  .carousel {
+    transform: scale(0.7) !important;
+    margin-top: -50px !important;
+  }
+}
+
 </style>
