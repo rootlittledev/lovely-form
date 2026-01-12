@@ -1,4 +1,12 @@
 {
+  "name": "lovely-form-front",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "cd lovely-front && npm run build",
+    "dev": "cd lovely-front && npm run dev",
+    "preview": "cd lovely-front && npm run preview"
+  },
   "dependencies": {
     "axios": "^1.13.2",
     "vuetify": "^3.11.6"
