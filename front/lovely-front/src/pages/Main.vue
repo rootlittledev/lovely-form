@@ -12,21 +12,23 @@ const images: string[] = [
 ]
 const currentSlide = ref<number>(0)
 const screenSize = ref<string>('')
+const platform = ref<string>('')
 
 const updateScreenSize = () => {
   const width = window.innerWidth
   const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0
+  const isWindows = navigator.platform.toUpperCase().indexOf('WIN') >= 0
+  
+  if (isMac) platform.value = 'Mac'
+  else if (isWindows) platform.value = 'Windows'
+  else platform.value = 'Linux'
   
   if (width <= 767) screenSize.value = 'Mobile'
   else if (width <= 1023) screenSize.value = 'Tablet Portrait'
   else if (width <= 1199) screenSize.value = 'Tablet Landscape'
   else if (width <= 1439) screenSize.value = 'Desktop'
-  else if (width <= 1919) {
-    screenSize.value = isMac ? 'Large Desktop (Mac)' : 'Large Desktop'
-  }
-  else {
-    screenSize.value = isMac ? 'Extra Large Desktop (Mac)' : 'Extra Large Desktop'
-  }
+  else if (width <= 1919) screenSize.value = 'Large Desktop'
+  else if (width >= 1920) screenSize.value = 'Extra Large Desktop'
 }
 
 onMounted(() => {
@@ -44,7 +46,7 @@ onUnmounted(() => {
     <div class="mobile-viewport">
       <!-- Profile Image -->
       <div class="text-center" style="margin-top: 80px;">
-        <div class="screen-indicator">{{ screenSize }}</div>
+        <div class="screen-indicator">{{ screenSize }} - {{ platform }}</div>
         <v-avatar size="100" class="mb-4">
           <v-img src="/avatar.jpeg" alt="Profile"/>
         </v-avatar>
