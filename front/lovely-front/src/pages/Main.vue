@@ -15,12 +15,18 @@ const screenSize = ref<string>('')
 
 const updateScreenSize = () => {
   const width = window.innerWidth
+  const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0
+  
   if (width <= 767) screenSize.value = 'Mobile'
   else if (width <= 1023) screenSize.value = 'Tablet Portrait'
   else if (width <= 1199) screenSize.value = 'Tablet Landscape'
   else if (width <= 1439) screenSize.value = 'Desktop'
-  else if (width <= 1919) screenSize.value = 'Large Desktop'
-  else screenSize.value = 'Extra Large Desktop'
+  else if (width <= 1919) {
+    screenSize.value = isMac ? 'Large Desktop (Mac)' : 'Large Desktop'
+  }
+  else {
+    screenSize.value = isMac ? 'Extra Large Desktop (Mac)' : 'Extra Large Desktop'
+  }
 }
 
 onMounted(() => {
@@ -196,6 +202,21 @@ onUnmounted(() => {
   .carousel {
     transform: scale(0.7) !important;
     margin-top: -50px !important;
+  }
+}
+
+/* Mac-specific adjustments */
+@supports (-webkit-backdrop-filter: blur(1px)) {
+  @media screen and (min-width: 1440px) and (max-width: 1919px) {
+    .carousel {
+      transform: scale(0.6) !important;
+    }
+  }
+  
+  @media screen and (min-width: 1920px) {
+    .carousel {
+      transform: scale(0.4) !important;
+    }
   }
 }
 
