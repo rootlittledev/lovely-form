@@ -1,53 +1,57 @@
 /* Mac-specific adjustments */
+.is-mac .carousel {
+  transform: scale(0.7) !important;
+}
+
 /* Mobile */
 @media screen and (max-width: 767px) {
-  .mobile-viewport {
+  .is-mac .mobile-viewport {
     width: 100vw !important;
     height: 100vh !important;
     border-radius: 0 !important;
   }
 
-  .avatar {
+  .is-mac .avatar {
     margin-top: -50px;
   }
 
-  .instagram-link {
+  .is-mac .instagram-link {
     margin-top: 15px !important;
     display: block !important;
   }
 
-  .bg-brown {
+  .is-mac .bg-brown {
     padding-top: 0 !important;
   }
 }
 
 /* Tablet Portrait */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .mobile-viewport {
+  .is-mac .mobile-viewport {
     width: 600px !important;
   }
 
-  .carousel {
+  .is-mac .carousel {
     transform: scale(0.9) !important;
   }
 }
 
 /* Tablet Landscape / Small Desktop */
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
-  .mobile-viewport {
+  .is-mac .mobile-viewport {
     width: 450px !important;
   }
 
-  .instagram-link {
+  .is-mac .instagram-link {
     margin-top: 15px !important;
     display: block !important;
   }
 
-  .avatar {
+  .is-mac .avatar {
     margin-top: -50px;
   }
 
-  .carousel {
+  .is-mac .carousel {
     margin-top: 50px;
     transform: scale(0.75) !important;
   }
@@ -55,19 +59,19 @@
 
 /* Desktop */
 @media screen and (min-width: 1200px) and (max-width: 1439px) {
-  .mobile-viewport {
+  .is-mac .mobile-viewport {
     width: 550px !important;
   }
 
-  .avatar {
+  .is-mac .avatar {
     margin-top: -50px;
   }
 
-  .instagram-link {
+  .is-mac .instagram-link {
     margin-top: 20px !important;
   }
 
-  .carousel {
+  .is-mac .carousel {
     transform: scale(0.65) !important;
     margin-top: -120px !important;
   }
@@ -75,37 +79,37 @@
 
 /* Large Desktop */
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .mobile-viewport {
+  .is-mac .mobile-viewport {
     width: 500px !important;
   }
-  .avatar {
+  .is-mac .avatar {
     margin-top: -50px;
   }
 
-  .instagram-link {
+  .is-mac .instagram-link {
     margin-top: 20px !important;
   }
 
-  .carousel {
+  .is-mac .carousel {
     transform: scale(0.7) !important;
     margin-top: -100px !important;
   }
 }
 
 @media screen and (min-width: 1920px) {
-  .avatar {
+  .is-mac .avatar {
     margin-top: -50px;
   }
-  .mobile-viewport {
+  .is-mac .mobile-viewport {
     margin-top: 40px !important;
     width: 480px !important;
   }
 
-  .instagram-link {
+  .is-mac .instagram-link {
     margin-top: 10px !important;
   }
 
-  .carousel {
+  .is-mac .carousel {
     transform: scale(0.8) !important;
     margin-top: -90px !important;
   }

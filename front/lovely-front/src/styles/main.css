@@ -7,8 +7,7 @@
   left: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding-top: 40px;
+  align-items: flex-end;
   overflow: hidden;
 }
 
@@ -16,7 +15,7 @@
   width: 634px;
   height: calc(100vh - 80px);
   background: #af957e;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   overflow: hidden;
 }
 
