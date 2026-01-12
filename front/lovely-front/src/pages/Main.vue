@@ -52,7 +52,7 @@ onUnmounted(() => {
       <!-- Profile Image -->
       <div class="text-center" style="margin-top: 80px;">
         <div class="screen-indicator">{{ screenSize }} - {{ platform }}</div>
-        <v-avatar size="100" class="mb-4">
+        <v-avatar size="100" class="mb-4 avatar">
           <v-img src="/avatar.jpeg" alt="Profile"/>
         </v-avatar>
         <h1 class="profile-title">{{ title }}</h1>
