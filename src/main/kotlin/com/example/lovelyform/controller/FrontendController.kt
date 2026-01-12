@@ -5,13 +5,10 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping()
-class FrontendControllerRestController {
-
-}
+@RequestMapping("/api")
 class FrontendController {
 
-    @GetMapping("/api/hello")
+    @GetMapping("/hello")
     fun hello(): Map<String, String> =
         mapOf("message" to "Hello from Spring Boot 👋")
 }

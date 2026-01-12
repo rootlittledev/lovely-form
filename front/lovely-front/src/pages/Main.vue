@@ -2,12 +2,15 @@
 import { ref } from 'vue'
 
 const title = "lovelyform"
-const images = [
+const images: string[] = [
   '/carousel/image0.jpg',
   '/carousel/image1.jpg',
-  '/carousel/image2.jpg'
+  '/carousel/image2.jpg',
+  '/carousel/image3.jpg',
+  '/carousel/image4.jpg',
+  '/carousel/image5.jpg'
 ]
-const currentSlide = ref(0)
+const currentSlide = ref<number>(0)
 </script>
 
 <template>
@@ -109,6 +112,8 @@ const currentSlide = ref(0)
 .carousel-container {
   margin-top: 40px;
   padding: 0 5px;
+  display: flex;
+  justify-content: center;
 }
 
 .carousel {
