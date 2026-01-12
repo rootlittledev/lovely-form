@@ -67,3 +67,12 @@
   margin: 150px auto 0 auto !important;
   border-radius: 12px !important;
 }
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .mobile-viewport {
+    width: 100vw !important;
+    height: 100vh !important;
+    border-radius: 0 !important;
+  }
+}

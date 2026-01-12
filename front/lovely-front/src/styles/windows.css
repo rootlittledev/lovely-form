@@ -1,95 +1,115 @@
 /* Windows-specific adjustments */
-.carousel.is-windows {
-  /* Uses default scaling from main.css */
+.is-windows .carousel {
+  border: 2px solid white;
 }
 
 /* Mobile */
 @media screen and (max-width: 767px) {
-  .mobile-viewport.is-windows {
+  .mobile-viewport {
     width: 100vw !important;
     height: 100vh !important;
-    border-radius: 0 !important;
   }
 
-  .instagram-link.is-windows {
+  .is-windows .instagram-link {
     margin-top: 15px !important;
     display: block !important;
   }
+
+    .is-windows .store-button {
+        margin-top: 80px !important;
+    }
   
-  .bg-brown.is-windows {
+  .is-windows .bg-brown {
     padding-top: 0 !important;
   }
+
+    .is-windows .carousel {
+        transform: scale(0.9) !important;
+        margin-top: 50px !important;
+    }
 }
 
 /* Tablet Portrait */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .mobile-viewport.is-windows {
-    width: 600px !important;
+  .mobile-viewport {
+    width: 400px !important;
   }
   
-  .carousel.is-windows {
+  .is-windows .carousel {
     transform: scale(0.9) !important;
   }
 }
 
 /* Tablet Landscape / Small Desktop */
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
-  .mobile-viewport.is-windows {
-    width: 550px !important;
+  .mobile-viewport {
+    width: 500px !important;
   }
   
-  .instagram-link.is-windows {
+  .is-windows .instagram-link {
     margin-top: 15px !important;
     display: block !important;
   }
-  
-  .carousel-container.is-windows {
-    margin-top: -80px !important;
+  .is-windows .store-button {
+    margin-top: 70px !important;
+  }
+  .is-windows .carousel-container {
+    margin-top: -70px !important;
   }
   
-  .carousel.is-windows {
-    transform: scale(0.7) !important;
+  .is-windows .carousel {
+    transform: scale(0.75) !important;
   }
 }
 
 /* Desktop */
 @media screen and (min-width: 1200px) and (max-width: 1439px) {
-  .mobile-viewport.is-windows {
+  .is-windows .avatar{
+      margin-top: -50px;
+  }
+  .mobile-viewport {
     width: 500px !important;
   }
   
-  .instagram-link.is-windows {
+  .is-windows .instagram-link {
     margin-top: 20px !important;
   }
 
-  .store-button {
-      margin-top: 130px !important;
+  .is-windows .store-button {
+      margin-top: 70px !important;
       margin-bottom: 10px !important;
   }
   
-  .carousel.is-windows {
-    transform: scale(0.7) !important;
+  .is-windows .carousel {
+    transform: scale(0.8) !important;
   }
 }
 
 /* Large Desktop */
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .mobile-viewport.is-windows {
-    width: 600px !important;
+
+  .is-windows .avatar{
+    margin-top: -50px;
+  }
+  .mobile-viewport {
+    width: 550px !important;
   }
   
-  .instagram-link.is-windows {
+  .is-windows .instagram-link {
     margin-top: 20px !important;
   }
+  .is-windows .store-button {
+      margin-top: 70px !important;
+  }
   
-  .carousel.is-windows {
-    transform: scale(0.7) !important;
-    margin-top: -30px !important;
+  .is-windows .carousel {
+    transform: scale(0.76) !important;
+    margin-top: -10px !important;
   }
 }
 
 @media screen and (min-width: 1920px) {
-  .carousel.is-windows {
+  .is-windows .carousel {
     transform: scale(0.8) !important;
   }
 }
